@@ -3,15 +3,14 @@ public class Transaction {
     public Product productItem;
 
     // Constructor
-    public Transaction() {
-        customer = new Customer();
-        customer.fullName = "Default Customer";
+    public Transaction(Customer c) {
+        customer = c;
 
-        productItem = new Product();
-        productItem.modelName = "Default Product";
-        prod
-        uctItem.price = 0.0;
+        product= new Product();
+        product.modelName = "Default";
+        product.price = 0.0;
     }
+
     //Identifier
     public String identify() {
         return "I am the Transaction class. I record customer purchases.";
@@ -21,6 +20,6 @@ public class Transaction {
     public String getReport() {
         return "----- TRANSACTION REPORT -----\n"
                + customer.getDetails() + "\n"
-               + productItem.getDetails();
+               + product.getDetails();
     }
 }
