@@ -1,11 +1,10 @@
 public class Transaction {
     public Customer customer;
-    public Product productItem;
+    public Product product;
 
     // Constructor
     public Transaction(Customer c) {
         customer = c;
-
         product= new Product();
         product.modelName = "Default";
         product.price = 0.0;
