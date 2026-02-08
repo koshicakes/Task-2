@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         Customer c = new Customer();
-        c.fullName = "Richard Valentos"
+        c.fullName = "Richard Valentos";
 
         Transaction t = new Transaction(c);
 
