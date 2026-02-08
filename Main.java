@@ -1,20 +1,18 @@
 public class Main {
     public static void main(String[] args) {
-        Customer customer1 = new Customer();
-        Product vivo = new Product();
+        Customer c = new Customer();
+        c.fullName = "Richard Valentos"
 
-        customer1.fullName = "Richard Valentos";
-        vivo.modelName = "Vivo Y11";
-        vivo.price = 2500;
+        Transaction t = new Transaction(c);
 
-        Transaction transaction = new Transaction();
-        transaction.customer = customer1;
-        transaction.productItem = iPhone;
+        t.product.modelName = "Vivo Y11";
+        t.product.price = 3999.00;
 
         System.out.println(
-            vivo.identify() + "\n" +
-            transaction.identify() + "\n" +
-            transaction.getReport()
+            c.identify() + "\n" +
+            t.product.identify() + "\n" +
+            t.identify() + "\n" +
+            t.getReport()
         );
     }
 }
